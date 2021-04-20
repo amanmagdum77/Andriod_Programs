@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link type="text/css" href="style.css" rel="stylesheet" />
+</head>
+<body>
+<h1 style="text-align: center">Commenting Python Code</h1>
+<hr color="red" />
+
+<p>
+    Programming reflects your way of thinking in order to describe the single steps that you took to solve a problem using a computer. Commenting your code helps explain your thought process, and helps you and others to understand later on the intention of your code. This allows you to more easily find errors, to fix them, to improve the code later on, and to reuse it in other applications as well.</p>
+<p>Commenting is important to all kinds of projects, no matter whether they are - small, medium, or rather large. It is an essential part of your workflow, and is seen as good practice for developers. Without comments, things can get confusing, real fast. In this article we will explain the various methods of commenting Python supports, and how it can be used to automatically create documentation for your code using the so-called module-level docstrings.</p>
+<h3 style="color: darkgreen">Good vs Bad Comments</h3>
+<p>
+    As important as comments are, it's still possible to write bad comments. They should always be short, straight to the point, and add informative value.
+</p>
+<p>For example, this is a rather useless comment:</p>
+<pre>b = 56                       # assigning b a value of 56</pre>
+<p>The next example shows a more helpful comment, instead, and goes along with giving variables obvious names:</p>
+<pre>salestax10 = 1.10            # defining a sales tax of 10%
+      salestax20 = 1.20            # defining a sales tax of 20%</pre>
+<p>There are an infinite number of other scenarios that warrant comments. This is just one example. A good rule of thumb would be to add comments for any line of code (like a list comprehension) or section of code whose purpose isn't obvious. This is very subjective, and is actually a skill that needs to be learned.</p>
+
+
+<h3 style="color: darkgreen">Types of Comments</h3>
+<p>A comment in Python starts with the hash character, #, and extends to the end of the physical line. A hash character within a string value is not seen as a comment, though. To be precise, a comment can be written in three ways - entirely on its own line, next to a statement of code, and as a multi-line comment block.</p>
+<p>In the following sections I'll describe each type of comment.</p>
+
+<h3 style="color: darkgreen">Single-Line Comments</h3>
+<p>Such a comment starts with a hash character (#), and is followed by text that contains further explanations.</p>
+<pre># defining the post code
+  postCode = 75000</pre>
+<p>You can also write a comment next to a code statement. The next example shows that:</p>
+<pre># define the general structure of the product with default values
+  product = {
+      "productId": 0,          # product reference id, default: 0
+      "description": "",       # item description, default: empty
+      "categoryId": 0,         # item category, default: 0
+      "price": 0.00            # price, default: 0.00
+  }</pre>
+<p>The Style Guide for Python Code (PEP8) recommends less than 79 characters per line. In practice, 70 or 72 characters per line are easier to read, and thus is recommended. If your comment is approaching or exceeding this length then you will want to spread it out over multiple lines.</p>
+<h3 style="color: darkgreen">Multi-Line Comments</h3>
+<p>As already mentioned above, an entire comment block is also understood by Python. These comments serve as in-line documentation for others reading your code, and explain things in more detail, usually.</p>
+<p>Technically Python doesn't have explicit support for multi-line comments, so the following options are considered a workaround by some, but still work for the purpose of multi-line comments.</p>
+<p>Version 1 combines single-line comments as follows:</p>
+<pre># LinuxThingy version 1.6.5
+  #
+  # Parameters:
+  #
+  # -t (--text): show the text interface
+  # -h (--help): display this help</pre>
+<p>Version 2 is simpler than version 1. It's originally intended to be used for creating documentation (see more about this below), but it can also be used for multi-line comments.</p>
+<pre>"""
+  LinuxThingy version 1.6.5
+
+  Parameters:
+
+  -t (--text): show the text interface
+  -h (--help): display this help
+  """</pre>
+<p>Note that the latter version needs to be enclosed in special quotation marks (""") to work, and not hash characters.</p>
+<p>It is quite common to start a Python file with a few lines of comments. These lines state information regarding the project, the purpose of the file, the programmer who developed it or has worked on it, and the software license that is used for the code.</p>
+<p>This snippet is taken from one of the examples I use for training purposes. The comment starts with the description, and is followed by the copyright notice with my name, and the year of publication of the code. Below you will see that the code is licensed under GNU Public License (GPL). In order to contact me my email address is added there too.</p>
+<pre># -----------------------------------------------------------
+  # demonstrates how to write ms excel files using python-openpyxl
+  #
+  # (C) 2015 Frank Hofmann, Berlin, Germany
+  # Released under GNU Public License (GPL)
+  # email frank.hofmann@efho.de
+  # -----------------------------------------------------------</pre>
+
+
+<h3 style="color: darkgreen">Docstring Comments</h3>
+<p>Python has a built-in concept called docstrings, which is a great way to associate documentation you've written with Python modules, functions, classes, and methods. A docstring is added as a comment right below the function, module, or object head, and describes what the function, module, or object does. It is expected to follow these rules:</p>
+<ul>
+    <li>A docstring is either a single line, or a multi-line comment. In the latter case, the first line is a short description, and after the first line an empty line follows.</li>
+    <li>Begin the docstring with a capital letter, and end it with a period.</li>
+</ul>
+<p>This is a basic example of what it looks like:</p>
+<pre>def add(value1, value2):
+  """Calculate the sum of value1 and value2."""
+  return value1 + value2</pre>
+<p>In the Python interactive help system, the docstring is then made available via the __doc__ attribute.</p>
+<pre>>>> print add.__doc__
+  Calculate the sum of value1 and value2.</pre>
+<p>There is a number of tools that auto-generate documentation from docstrings, such as Doxygen, PyDoc, pdoc, and the autodoc extension for Sphinx. We will explain to you how to work with them in a follow-up article.</p>
+
+<h3 style="color: darkgreen">Conclusion</h3>
+<p>Writing proper comments in your Python code is not that complicated, and you just need the power of endurance. It helps all of us that are trying to understand your code, including yourself for when you revisit your code at a later date. We hope that the advice we have given you here makes it easier for you to create better comments and documentation in your code.</p>
+
+
+
+
+
+
+
+
+<hr>
+
+
+</body>
+</html>

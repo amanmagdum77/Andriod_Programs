@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.java">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/anime_girl_logo"
+        android:label="Last minute notes"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="edu.ritindia.aman_magdum.Videos3"
+            android:label="Videos">
+        </activity>
+        <activity
+            android:name="edu.ritindia.aman_magdum.Python"
+            android:label="Python">
+
+        </activity>
+        <activity
+            android:name="edu.ritindia.aman_magdum.OOPS8"
+            android:label="Python">
+
+        </activity>
+        <activity
+            android:name="edu.ritindia.aman_magdum.OOPS7"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OOPS6"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OOPS5"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OOPS4"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Advance7"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Advance6"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Advance5"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Advance4"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DS9"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DS8"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DS7"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DS6"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DS5"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DS4"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DS3"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DS2"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DS1"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.DataStructures"
+            android:label="Data Structures" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.HomeActivity2"
+            android:label="Last minute notes" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.PythonIDE"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic13"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic12"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic11"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic10"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic9"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic8"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic7"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Networking6"
+            android:label="Networking" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Networking4"
+            android:label="Networking" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Networking5"
+            android:label="Networking" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Networking3"
+            android:label="Networking" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Networking2"
+            android:label="Networking" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Networking1"
+            android:label="Networking" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Networking"
+            android:label="Networking" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OS8"
+            android:label="Operating System" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OS7"
+            android:label="Operating System" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OS6"
+            android:label="Operating System" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OS5"
+            android:label="Operating System" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OS4"
+            android:label="Operating System" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OS3"
+            android:label="Operating System" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OS2"
+            android:label="Operating System" />
+        <activity android:name="edu.ritindia.aman_magdum.OS1" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OS"
+            android:label="Operating System" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.AboutUS"
+            android:label="About us" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic6"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic5"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic4"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Programs7"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Programs6"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Programs5"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Programs4"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Programs3"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Programs2"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Programs1"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Programs"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OOPS3"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OOPS2"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OOPS1"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Advance3"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Advance2"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Advance1"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic3"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic2"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic1"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.OOPS"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Advance"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.pkeywords"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.pvariables"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.hello_world"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.Basic"
+            android:label="Python" />
+        <activity
+            android:name="edu.ritindia.aman_magdum.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

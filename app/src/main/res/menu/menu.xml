@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Main Menu"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_more_vert_24">
+
+        <menu>
+            <item android:id="@+id/abtUs"
+                android:title="About Us"
+                android:icon="@drawable/ic_baseline_people_alt_24"
+                app:showAsAction="ifRoom"/>
+
+            <item android:id="@+id/contUS"
+                android:title="Contact Us"
+                android:icon="@drawable/contact"
+                app:showAsAction="ifRoom"/>
+
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/share_icon"
+                android:title="Share"
+                app:showAsAction="ifRoom"></item>
+
+            <item android:id="@+id/rate"
+                android:title="Rate Us"
+                android:icon="@drawable/ic_baseline_rate_review_24"></item>
+
+
+        </menu>
+    </item>
+
+</menu>

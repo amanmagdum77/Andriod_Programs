@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Linked List</title>
+    <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Linked List</h1>
+<hr color="red">
+<p>It is a collection of data items which are linked with one other.
+    <br>each data items has two fields -<br>1.Data field- Stores actual data <br>2.Link field- stores address of netx data item which points to next data element<br>hence, data item are called as <b>Nodes</b>.</p>
+<hr>
+<p><b style="color: darkgreen;">Advantages of Linked List:</b><br>1.It is dynamic data structure - linked list can grow or shrink at run time<br>2. Efficient memory utilization- here, memory is not pre-allocated. At ru  time,memory is allocated and de-allocated when it is no longer needed. <br>3.Insertion and deletions are easier and efficient</p>
+<hr>
+<p><b style="color: darkgreen;">Disadvantages of linked list:</b><br>1.More memory- if no. of fields are more, then more memory spaces is needed.<br>2.Time consuming.</p>
+<hr>
+<h3 style="color: darkgreen;">Doubly linked list</h3>
+<p>Doubly Linked List is a variation of Linked list in which navigation is possible in both ways, either forward and backward easily as compared to Single Linked List. Following are the important terms to understand the concept of doubly linked list.
+
+    <br>Link- Each link of a linked list can store a data called an element.<br>Next- Each link of a linked list contains a link to the next link called Next.<br>Prev- Each link of a linked list contains a link to the previous link called Prev.<br>LinkedList- A Linked List contains the connection link to the first link called First and to the last link called Last.
+</p>
+<hr>
+<p><b style="color: darkgreen;">1.Insertion operation</b><br>void insertFirst(int key, int data) {
+
+    <br>//create a link
+    <br>struct node *link = (struct node*) malloc(sizeof(struct node));
+    <br>void insertFirst(int key, int data) {
+
+    <br>//create a link
+    <br>struct node *link = (struct node*) malloc(sizeof(struct node));
+    <br>link->key = key;
+    <br>link->data = data;
+
+    <br>if(isEmpty()) {
+    <br>//make it the last link
+    <br>last = link;
+    <br>} else {
+    <br>//update first prev link
+    <br>head->prev = link;
+    <br>}
+
+    <br>//point it to old first link
+    <br>link->next = head;
+
+    <br>   //point first to new first link
+    <br>head = link;
+    <br>}
+</p>
+<hr>
+<p><b style="color: darkgreen;">2.Deletion operation</b><br>//insert link at the last location
+    <br>void insertLast(int key, int data) {
+
+    <br>//create a link
+    <br>struct node *link = (struct node*) malloc(sizeof(struct node));
+    <br>link->key = key;
+    <br> link->data = data;
+
+    <br>if(isEmpty()) {
+    <br>//make it the last link
+    <br>last = link;
+    <br>} else {
+    <br>//make link a new last link
+    <br>last->next = link;
+
+    <br>//mark old last node as prev of new link
+    <br>link->prev = last;
+    <br>}
+
+    <br>//point last to new last node
+    <br>last = link;
+    <br>}</p>
+<hr>
+<h3 style="color: darkgreen;">Circular linked list</h3>
+<p>Circular Linked List is a variation of Linked list in which the first element points to the last element and the last element points to the first element. Both Singly Linked List and Doubly Linked List can be made into a circular linked list.</p>
+<hr>
+<p><b style="color: darkgreen;">1.Insertion operation:</b><br>//insert link at the first location
+    <br>void insertFirst(int key, int data) {
+    <br>//create a link
+    <br>struct node *link = (struct node*) malloc(sizeof(struct node));
+    <br>link->key = key;
+    <br>link->data= data;
+
+    <br>if (isEmpty()) {
+    <br>   head = link;
+    <br>head->next = head;
+    <br>} else {
+    <br>//point it to old first node
+    <br>link->next = head;
+
+    <br>      //point first to new first node
+    <br>  head = link;
+    <br>}
+    <br>}</p>
+<hr>
+<p><b style="color: darkgreen;">2.Deletion Operation:</b><br>struct node * deleteFirst() {
+    <br> //save reference to first link
+    <br>struct node *tempLink = head;
+
+    <br>if(head->next == head) {
+    <br>head = NULL;
+    <br>return tempLink;
+    <br>}
+
+    <br>//mark next to first link as first
+    <br>   head = head->next;
+
+    <br>//return the deleted link
+    <br>return tempLink;
+    <br>}</p>
+<hr>
+</body>
+</html>
+

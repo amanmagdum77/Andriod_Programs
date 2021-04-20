@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Graph</title>
+	<link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1><center>Graph</center></h1>
+<hr color="red">
+<p>Graph is non-primitive , non-linear data structure. mathematical structure used in geography,chemistry and engg. science.<br>Graph is widely used in solving games and puzzles. It is used in Computer design<br>Graph is defined as G=(V,E)  where V is set of vertices/nodes and E is set of edges/arcs<br>V(G) read as V of G , set of vertices <br>E(G) read as E of G , set of edges</p>
+<hr>
+<p><b style="color: darkgreen;">Basic Terminologies:</b><br>1.Adjacent vertices-  Vertex v1 is said to be adjacent to a vertex v2 if there is an edge (v1,v2) or (v2,v1)<br>2.Path-  It is sequence of nodes.<br>3.Cycle- A cycle is path in which 1st vertex and last vertex is same.<br>4.Connected graph-  A graph is called as connected if there exist a  path from any vertex to any other vertex.<br>5.Directed graph- A graph with all directed edges is called as directed  graph or digraph.<br>6.Uni directed graph- A graph with all uni-directed edges is called as uni-directed graph, hence edges are bidirectional or unordered pair.<br>7.Strongly connected graph-  A directed graph is strongly connected graph if there is path between any two pair of vertices.<br>8.Weakly connected graph-  A directed graph which there does not exist path from same vertex to same other vertex.<br>9.Weighted graph-  A graph is said to be weighted if every edge in the graph is assigned same weight or value.</p>
+
+<hr><h3 style="color: darkgreen;">Graph Traversal</h3>
+<p>A graph traversal means visiting all the nodes of a graph<br>There are two types of graph traversal<br>1.BFS- Breadth first search.<br>2.DFS-  Depth first search</p>
+
+<hr><p><b style="color: darkgreen;">1.BFS:-</b><br>In BFS traversal,one node is selected as the start position<br>BFS uses queue data structure to store the nodes of each level<br>IT is visited and marked,then all unvisited nodes adjacent to the next node  are visited and marked in some sequential manner.<br>Finally, the unvisited nodes immediately adjacent to these nodes are visited has been traversed</p>
+
+<hr><p><b style="color: darkgreen;">2.DFS:-</b><br>Depth first search (DFS) algorithm starts with the initial node of the graph G, and then goes to deeper and deeper until we find the goal node or the node which has no children. The algorithm, then backtracks from the dead end towards the most recent node that is yet to be completely unexplored.
+<hr>
+<br>The data structure which is being used in DFS is stack. The process is similar to BFS algorithm. <br>In DFS, the edges that leads to an unvisited node are called discovery edges while the edges that leads to an already visited node are called block edges.</p>
+<hr></body>
+</html>

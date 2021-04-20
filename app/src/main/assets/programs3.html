@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">OOPS</h1>
+<hr color="red">
+
+
+
+
+<h3 style="color: darkgreen;">Class Objects</h3>
+
+
+
+<pre>
+    class Bank:
+
+        def deposit(self,n):
+            global amount
+            amount = amount + n
+            return amount
+
+        def withraw(self,d):
+            global amount
+            amount = amount-d
+            return amount
+
+
+
+    e = Bank()     # when constructors comes into picture arguments
+    amount = 1000
+
+    amount = e.deposit(500)
+    amount = e.withraw(200)
+
+    print(amount)
+
+    </pre>
+
+<h3 style="color: darkgreen;">Class Variables</h3>
+
+
+
+<pre>
+    class Cars:
+
+        wheels = 6
+
+        def __init__(self,comp,mile):
+            self.comp = comp
+            self.mile = 20
+
+
+    Cars.wheels = 4
+    a = Cars('Ford',22)
+    b = Cars('NISSAN',26)
+
+    print(a.comp,a.mile,a.wheels)
+    print(b.comp,b.mile,b.wheels)
+
+    a.wheels = 5
+    print(a.comp,a.mile,a.wheels)
+    print(b.comp,b.mile,b.wheels)
+
+
+    </pre>
+<h3 style="color: darkgreen;">Methods</h3>
+<pre># we have 3 types of methods namely instance method, class method and static method
+    # @staticmethod and @classmethod must be used before using the respective methods
+    # self isn't a parameter in the definition of methods, instead we use cls for class method
+    # and for static method we keep it blank i.e. we don't pass a alternative argument for self
+    # to access the class variables we use cls same as we use object. for eg, school is a class variable
+    # we access it by cls.school
+    # class variables are declared just after we write class name, not under any methods, it's scope is for complete class.
+    # class methods and static methods are called using the class_name.method_name()
+
+    class student:
+
+        college = 'University of people'
+
+        def avg(self,m1,m2,m3):
+            self.m1=m1
+            self.m2=m2
+            self.m3=m3
+            avg = (self.m1+self.m2+self.m3)/3
+            return avg
+
+        @classmethod
+        def collegename(cls):
+            return cls.college
+
+        @staticmethod
+        def info():
+            print("University of people isn't a real university")
+
+
+    a = student()
+    b = student()
+
+    avg = a.avg(45,56,64)
+    print(avg)
+
+    print(student.collegename())
+
+    name = student.collegename()
+    print(name)
+
+    student.info()</pre>
+
+<h3 style="color: darkgreen;">Inner Class</h3>
+
+
+
+<pre># You can create a object of inner class <br>inside the outer class
+    #                               OR
+    # You can create a object of inner class outside<br> of the outer class provided you use outer class<br>object to call it
+
+    class outer:
+
+        def __init__(self):
+            self.a = 20
+            self.b = 40
+            self.i = self.inner()      <br># inner class object created
+
+        def outerupdate(self,a,b):
+            self.a = a
+            self.b = b
+
+        def showouter(self):
+            print(self.a,self.b,'        <br>    Outer class method')
+            self.i.showinner()               <br>       # inner class method called
+
+
+        class inner:
+
+            def __init__(self):
+                self.c = 100
+                self.d = 200
+
+            def innerupdate(self,c,d):
+
+                self.c = c
+                self.d = d
+
+            def showinner(self):
+                print(self.c,self.d,'          inner class method')
+
+
+    z = outer()
+    z.outerupdate(33,66)
+    z.showouter()
+
+    y = outer.inner()                # inner class object created
+    y.innerupdate(66,99)
+    y.showinner()
+
+    z.i.innerupdate(102,204)
+    z.i.showinner()
+    </pre>
+
+<h3 style="color: darkgreen;">Self in constructors</h3>
+
+
+
+<pre>class person:
+
+    def __init__(self):
+        self.age = 18
+        self.name = 'jack'
+        print('Constructor called',self.name,self.age)
+
+    def update(self):
+        self.age = 30
+        print(self.age)
+
+    def compare(self,other):
+        if self.age == other.age:
+            return True
+        else:
+            return False
+
+
+c1 = person()
+c2 = person()
+
+c1.name = 'Anvi'
+
+c1.update()
+
+if c1.compare(c2):
+    print('They are  of same age')
+else:
+    print('They are of different age')
+    </pre>
+
+
+<h3 style="color: darkgreen;">Decimal to Octaldecimal conversion</h3>
+<pre>n=int(input("Enter number"))
+    a=[]
+    i=0
+    while n!=0:
+        p=n%8
+        a.append(p)
+        n=int(n/8)
+
+    print(a)
+    a.reverse()
+
+    for i in range(len(a)):
+        print(a[i],end='')
+
+    </pre>
+<h3 style="color: darkgreen;">Inheritance</h3>
+<pre>#If you create object of sub class it will first try to find init of
+    # sub class if it is not found then it will call init of super class
+    # when you create a object of subclass it will call init of sub class first
+    # If you have call super then it will first call Super class then call init of of Sub class
+    # if you have object of B it will still call constructor of A
+    # if you don't have constructor of B, that's why it goes to A
+    # the moment you type super() you can access all the features of parent class
+
+
+    #Note constructor of parent class is called using super class in every child class
+
+
+    class A:
+
+        a = 10
+
+        def __init__(self):
+            print('A constructor called')
+        def Alfa(self):
+            print(self.a)
+
+
+    class B(A):
+
+        b = 20
+
+        def __init__(self):
+            super().__init__()
+            print('B constructor called')
+            super().__init__()    # this jumps to the parent class constructor
+
+        def Beta(self):
+            print(self.a,self.b)
+
+
+    class C(A):
+
+        c = 30
+
+        def __init__(self):
+            super().__init__()
+            print('C constructor called')
+
+        def Charlie(self):
+            print(self.a,self.c)
+
+
+
+    class D(C,B):
+
+        d = 40
+
+        def __init__(self):
+            super().__init__()  # this will jump to constructor B which will jump to A now to C again A and then finally D
+            print('D constructor called')
+
+        def Delta(self):
+            print(self.a,self.b,self.c,self.d)
+
+    a = A()
+    a.Alfa()
+    print()
+
+    b = B()
+    b.Beta()
+    b.Alfa()
+    print()
+
+    c = C()
+    c.Charlie()
+    c.Alfa()
+    print()
+
+    d = D()
+    d.Delta()
+    -------------------------------
+    # If you create object of sub class it will first try to find init of
+    # sub class if it is not found then it will call init of super class
+    # when you create a object of subclass it will call init of sub class first
+    # If you have call super then it will first call Super class then call init of of Sub class
+
+    class A:
+
+        a = 10
+
+        def __init__(self):
+            print('A constructor called')
+        def Alfa(self):
+            print(self.a)
+
+
+    class B(A):
+
+        b = 20
+
+        def __init__(self):
+            super().__init__()
+            print('B constructor called')
+
+        def same_method_name(self):
+            print("B method initiated")
+
+        def Beta(self):
+            print(self.b)
+
+
+    class C():
+
+        c = 30
+
+        def __init__(self):
+            super().__init__()
+            print('C constructor called')
+
+        def same_method_name(self):
+            print("C method initiated")
+
+
+        def Charlie(self):
+            print(self.c)
+
+
+
+    class D(C,B):    # priority is always from left to right, only one method will be called
+                     # that is from the class C    MRO - method resolution order
+
+        d = 40
+
+        def __init__(self):
+            super().__init__()
+            print('D constructor called')
+
+        def Delta(self):
+            print(self.d)
+            super().Charlie()           #you can call parent class method using super keyword
+
+
+
+    d = D()
+    d.Delta()
+    d.same_method_name()     # calling parent class method using child class object</pre>
+
+<h3 style="color: darkgreen;">Octal to Decimal</h3>
+<pre>a=list(map(int,input()))
+    a.reverse()
+    print(a)
+    d=0
+    for i in range(len(a)):
+        d = d + a[i]*(8**i)
+
+    print(d)
+
+
+    </pre>
+<h3 style="color: darkgreen;">Method Overloading</h3>
+<pre># if you call show, it will call the show method of the sub-class if you have it
+    # if you don't have show method in the sub-class, then it will search for show method in parent class
+
+
+    class A:
+
+        def show(self):
+            print('from A class')
+
+
+    class B(A):
+        #pass
+        def show(self):
+            print('From B class')
+
+
+    a = A()
+    b = B()
+
+    a.show()
+    b.show()
+
+    </pre>
+
+<h3 style="color: darkgreen;">Multithreading</h3>
+<pre># if you call show, it will call the show method of the sub-class if you have it
+    # if you don't have show method in the sub-class, then it will search for show method in parent class
+
+
+    class A:
+
+        def show(self):
+            print('from A class')
+
+
+    class B(A):
+        #pass
+        def show(self):
+            print('From B class')
+
+
+    a = A()
+    b = B()
+
+    a.show()
+    b.show()
+
+    </pre><hr>
+</body>
+</html>

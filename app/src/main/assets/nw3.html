@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Data Link Layer </h1>
+<hr color="red">
+<p>
+<h3 style="color: hsl(120, 100%, 20%);">Flow Control :</h3>
+<ol>
+    <li> N = Sender’s Window Size. (in SR both sender and receiver window are same)
+        a = Tp /Tt</li>
+    <br>
+    <li>Sequence No. >= (Sender’s Window Size) + (Reciever’s Window Size )</li>
+    <br>
+    <li>Efficiency in TDM(polling) = Tt / (Tpoll + Tt)</li>
+    <br>
+    <li>In CSMA/CD, Tt >= 2*Tp
+        Hence, min frame length = 2*Tp*B</li>
+    <br>
+    <li>In CSMA/CD, Efficiency = 1/(1 + 6.44a)</li>
+    <br>
+    <li>Back-off Algorithm for CSMA/CD
+        Waiting time = back–off time
+        Let n = collision number or re-transmission serial number.
+        Then, Waiting time = K * Tslot
+        where K = [0, 2n – 1 ] </li>
+    <br>
+    <li>N = No. of stations
+        Early Token Reinsertion : Efficiency = 1/(1 + a/N)
+        Delayed Token Reinsertion : Efficiency = 1/(1 + (N+1)a/N)</li>
+    <br>
+    <li>Pure Aloha Efficiency = 18.4 %
+        Slotted Aloha Efficiency = 36.8%</li>
+    <br>
+    <li>Maximum data rate (channel capacity) for noiseless and noisy channels</li>
+    <br>
+    <ul>
+        <li><strong>Noiseless Channel : Nyquist Bit Rate</strong>BitRate = 2 * Bandwidth * log2(L)
+            where,L is the number of signal levels used to represent data.</li>
+        <br>
+        <li><strong>Noisy Channel : Shannon Capacity</strong>    Capacity = bandwidth * log2(1 + SNR)
+            where, SNR is the signal-to-noise ratio
+        </li>
+    </ul>
+    <br>
+    <li><strong>Error Control</strong></li>
+    <br>
+    <ul>
+        <li><Strong>Hamming Code :</Strong>> is a set of error-correction codes that can be used to detect and correct the errors that can occur when the data is moved or stored from the sender to the receiver. </li>
+        <br>
+        <strong>Redundant bits: </strong>
+        2r ≥ m + r + 1
+        where, r = redundant bit, m = data bit
+        <br>
+        <li><strong>Framing in DLL: </strong>It provides a way for a sender to transmit a set of bits that are meaningful to the receiver.</li>
+        <br>
+        <strong>Character/Byte Stuffing:</strong>Used when frames consist of character. If data contains ED then, byte is stuffed into data to diffentiate it from ED.
+        Bit stuffing: Sender stuffs a bit to break the pattern i.e. here appends a 0 in data = 011101.
+    </ul>
+
+
+
+</ol>
+
+</p>
+<hr>
+</body>
+</html>

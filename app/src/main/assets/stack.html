@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stack</title>
+    <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Stack</h1>
+<hr color="red">
+
+<p>A stack is a basic data structure that can be logically thought of as a linear structure represented by a real physical stack or pile, a structure where insertion and deletion of items takes place at one end called top of the stack. The basic concept can be illustrated by thinking of your data set as a stack of plates or books where you can only take the top item off the stack in order to remove things from it. This structure is used all throughout programming.</p>
+<hr>
+<p>The basic implementation of a stack is also called a LIFO (Last In First Out) to demonstrate the way it accesses data, since as we will see there are various variations of stack implementations.</p>
+<hr>
+<p>There are basically three operations that can be performed on stacks. They are <br>1) inserting an item into a stack (push). <br>2) deleting an item from the stack (pop). <br>3) displaying the contents of the stack.</p>
+<hr>
+<h3 style="color: darkgreen;">1.Push:</h3>
+<p>The process of adding new element to the top of the stack is called <b>Push Operation.</b> <br> for every pushing element,top of stack is incremented by one <br>If array is full and no element can be inserted, that condition is called <b>stack full</b> Or <b>Stack overflow</b> condition
+
+<hr>
+<h3 style="color: darkgreen;">Algorithm for Push Operation:-</h3>
+<pre>
+    Push(Stack [Maxsize],item)
+    let Stack[Maxsize] be an array for implementing stack
+    1.[check if stack overflow]
+    If Top=Maxsize-1
+        Print "Overflow"
+    else
+        Top=Top+1
+        Stack[Top]&lt-item
+    2.Exit
+</pre>
+<hr>
+
+<h3 style="color: darkgreen;">2.Pop:</h3>
+
+<p>pop() function is used to remove an element from the top of the stack(newest element in the stack). <br>The element is removed to the stack container and the size of the stack is decreased by 1.<br>If there is no element in stack and the pop is performed then this will result into <b>Stack Underflow</b> Or <b>Stack Empty</b>Condition <br>
+<hr>
+<h3 style="color: darkgreen;">Algorithm for Pop Operation:-</h3>
+<pre>
+    Pop(Stack [Maxsize],item)
+    1.[check for stack underflow/empty]
+    2.if(Top==-1)
+        print "stack underflow"
+    else  [Remove the top element]
+        Top=Top-1
+        Return the deleted item
+        item=item=stack[Top]
+    3.Exit
+</pre>
+<hr>
+<h3 style="color: darkgreen;">Application of Stack:</h3>
+<pre>
+    1.Stack frames-C memory map
+    2.Reversing a String
+    3.Infix to Postfix conversion
+    4.Undo mechanism in text editors
+    5.Removing / wearing bangles
+    6.Support fot recursion
+    7.A garage that is only one method calls car can go out
+</pre>
+
+
+
+<hr>
+</body>
+</html>

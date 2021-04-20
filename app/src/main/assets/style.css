@@ -1,0 +1,18 @@
+
+table#educationTable,
+th,
+td {
+  border: 1px solid black;
+  padding: 2px;
+}
+
+td {
+  padding: 8px;
+}
+.profilepic {
+  border-radius: 50%;
+}
+
+
+/*body {background-color: #F1FDFA;}
+*/

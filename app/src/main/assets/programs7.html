@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Exception and File Handling</h1>
+<hr color="red">
+<h3 style="color: darkgreen;">Exception</h3>
+<pre>
+
+    def divide():
+
+        try:
+
+            a= int(input('Enter any 1st number'))
+            b= int(input('Enter any 2nd number'))
+            print(b)
+
+            r = a/b
+            print(r)
+
+        except ValueError as e:
+            print('Invalid input')
+
+        except ZeroDivisionError as e:
+            print('Cannot be divided by Zero, Error type :',e)
+
+        except Exception:
+            print('Something went wrong')
+
+        finally:
+            print('All done')
+
+    print('checking for ZeroDivisionError Program')
+    divide()
+    print('')
+
+    </pre>
+
+
+<h3 style="color: darkgreen;">File Handling</h3>
+<pre>
+
+f1 = open('Naurto.txt','w')
+
+f1.write('Dattebayo')
+
+f1.close()
+    </pre>
+<hr>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Threads</h1>
+<hr color="red">
+
+
+<p>
+    A thread is a lightweight process and forms the basic unit of CPU utilization. A process can perform more than one task at the same time by including multiple threads.
+<ul>
+    <li>A thread has its own program counter, register set, and stack</li>
+    <br>
+    <li>A thread shares resources with other threads of the same process the code section, the data section, files and signals.</li>
+</ul>
+A new thread, or a child process of a given process, can be introduced by using the fork() system call. A process with n fork() system calls generates 2n – 1 child processes.
+
+There are two types of threads:
+<br>
+<ul>
+    <li><strong>User Threads :</strong>
+        <br><br>
+        <ol>
+            <li>User threads are implemented by users.</li>
+            <br>
+            <li>OS doesn’t recognize user level threads.</li>
+            <br>
+            <li>Implementation of User threads is easy.</li>
+            <br>
+            <li>Context switch time is less.</li>
+            <br>
+            <li>Context switch requires no hardware support.</li>
+            <br>
+            <li>If one user level thread performs blocking operation then entire process will be blocked.</li>
+        </ol>
+    </li>
+    <br>
+    <li><strong>Kernel Threads :</strong>
+        <br><br>
+        <ol>
+            <li>kernel threads are implemented by OS.</li>
+            <br>
+            <li>Kernel threads are recognized by OS.</li>
+            <br>
+            <li>Implementation of Kernel thread is complicated.</li>
+            <br>
+            <li>Context switch time is more.</li>
+            <br>
+            <li>Hardware support is needed.</li>
+            <br>
+            <li>If one kernel thread performs blocking operation then another thread can continue execution.</li>
+
+        </ol>
+    </li>
+</ul>
+</p>
+<hr>
+</body>
+</html>

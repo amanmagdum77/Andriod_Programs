@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Queue</title> <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Queue</h1>
+<hr color="red">
+<p>Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.
+	A real-world example of queue can be a single-lane one-way road, where the vehicle enters first, exits first. More real-world examples can be seen as queues at the ticket windows and bus-stops.</p>
+
+<h3 style="color: darkgreen;">Operations on Queue:</h3>
+1.Insertion of element in queue
+<br>
+2.Deletion of element from a queue.
+</p>
+<hr>
+<h3 style="color: darkgreen;"> 1. Algorithm for Insertion:</h3>
+QINSERT(MAXSIZE, item)
+<br>
+1.Initialise front=0,rear=-1
+<br>2. if rear==MAXSIZE-1
+<br>print "Queue is full"
+<br>else<br>rear=reae+1
+<br>QUEUE[rear]=item<br>
+3.END</p>
+
+<h3 style="color: darkgreen;">2.Algorithm for Deletion:</h3>1.QDELETE(MAXSIZE,item)<br>2.if(front < 0)<br>print "Queue is empty"<br>else<br>item=QUEUE[Front]<br>front=front+1<br>3.END</p>
+
+<hr><h3 style="color: darkgreen;">Limitation of linear queue/simple queue:</h3> Suppose, we have inserted 5 elements now rear=4 and front=5,and we deleted 5 elements.<br>if we try to add more elements , the elements can't be inserted ,because in queue ,the new elements are always inserted from the rear end and read end indicated the last location of the queue .<br>Hence, though the space is there in the queue,we are unable to insert the elements.<br> To remove this problem,the 1st and obvious solution is that whenever element is deleted , shift all afterward elements to left by one position,but this is time consuming </p>
+<hr>
+<h3 style="color: darkgreen;">Circular Queue</h3>
+<p>Circular queue is one in which insertion of new elements is done at the very first location of queue , if last location of queue is full<br>In other words, if we have queue of 5 elements then after inserting an element last(n-1=4th) location of queue next element will be inserted at very 1st location of queue.<br>If that location is empty Or It is queue in which 1st element just comes after the last element.</p>
+<hr>
+<h3 style="color: darkgreen;">Applications of Queue:</h3>
+1. CPU scheduling or Disk Scheduling , when multiple processes require CPU at the same time , various CPU scheduling algorithm are used which uses queue data structure such as 1st come-first serve algorithn<br>2.Pointer queue:-  It uses queue data structure to load documents into a buffer and then print the document.<br>3.Breadth first search uses queue data structure for traversing graph.<br>4.Call outer:-  System uses queue to hold people in an order of queue , until a service representative is tree.</p>
+<hr></body>
+</html>

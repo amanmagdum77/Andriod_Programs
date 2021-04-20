@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Network Layer </h1>
+<hr color="red">
+<ul>
+    <li>The Network Layer is the third layer of the OSI model.</li>
+    <li>It handles the service requests from the transport layer and further forwards the service request to the data link layer.</li>
+    <li>The network layer translates the logical addresses into physical addresses</li>
+    <li>It determines the route from the source to the destination and also manages the traffic problems such as switching, routing and controls the congestion of data packets.</li>
+    <li>The main role of the network layer is to move the packets from sending host to the receiving host.</li>
+</ul>
+<b>The main functions performed by the network layer are:</b>
+<ul>
+    <li><b>Routing:</b> When a packet reaches the router's input link, the router will move the packets to the router's output link. For example, a packet from S1 to R1 must be forwarded to the next router on the path to S2.</li>
+    <li><b>Logical Addressing:</b> The data link layer implements the physical addressing and network layer implements the logical addressing. Logical addressing is also used to distinguish between source and destination system. The network layer adds a header to the packet which includes the logical addresses of both the sender and the receiver.</li>
+    <li><b>Internetworking:</b> This is the main role of the network layer that it provides the logical connection between different types of networks.</li>
+    <li><b>Fragmentation:</b>The fragmentation is a process of breaking the packets into the smallest individual data units that travel through different networks.</li>
+</ul>
+
+
+
+
+
+
+<h3 style="color: hsl(120, 100%, 20%);">Forwarding & Routing</h3>
+<p>In Network layer, a router is used to forward the packets. Every router has a forwarding table. A router forwards a packet by examining a packet's header field and then using the header field value to index into the forwarding table. The value stored in the forwarding table corresponding to the header field value indicates the router's outgoing interface link to which the packet is to be forwarded.</p>
+<p>For example, the router with a header field value of 0111 arrives at a router, and then router indexes this header value into the forwarding table that determines the output link interface is 2. The router forwards the packet to the interface 2. The routing algorithm determines the values that are inserted in the forwarding table. The routing algorithm can be centralized or decentralized.
+
+</p>
+
+
+<img src="nw4_1.PNG"  width="100%" height="100%" alt="Routing Algorithms determine values in forwarding table">
+
+<b>Services Provided by the Network Layer</b>
+<ul>
+    <li><b>Guaranteed delivery:</b>This layer provides the service which guarantees that the packet will arrive at its destination.</li>
+    <li><b>Guaranteed delivery with bounded delay:</b>This service guarantees that the packet will be delivered within a specified host-to-host delay bound.</li>
+    <li><b>In-Order packets:</b>This service ensures that the packet arrives at the destination in the order in which they are sent.</li>
+    <li><b>Guaranteed max jitter:</b> This service ensures that the amount of time taken between two successive transmissions at the sender is equal to the time between their receipt at the destination.</li>
+    <li><b>Security services:</b> The network layer provides security by using a session key between the source and destination host. The network layer in the source host encrypts the payloads of datagrams being sent to the destination host. The network layer in the destination host would then decrypt the payload. In such a way, the network layer maintains the data integrity and source authentication services.</li>
+</ul>
+<hr>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link type="text/css" href="style.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+<h1 style="text-align: center;">Python Literals</h1>
+<hr color="red">
+<p>Python Literals can be defined as data that is given in a variable or constant.</p>
+<p>Python supports the following literals:</p>
+
+<h3 style="color: darkgreen;">1. String literals:</h3>
+<p>String literals can be formed by enclosing a text in the quotes. We can use both single as well as double quotes to create a string.</p>
+<pre>
+    Example:
+
+    "Aman" , '12345' </pre>
+<p>a) Single-line String- Strings that are terminated within a single-line are known as Single line Strings.</p>
+<pre>Example:
+
+    text1='hello'</pre>
+<p>b) Multi-line String - A piece of text that is written in multiple lines is known as multiple lines string.</p>
+<p>There are two ways to create multiline strings:</p>
+<p>1) Adding black slash at the end of each line.</p>
+<pre>Example:
+
+    text1='hello\
+    user'
+    print(text1)
+
+    'hellouser'</pre>
+
+<p>2) Using triple quotation marks:-</p>
+<pre>Example:
+
+    str2='''''welcome
+    to
+    SSSIT'''
+    print str2
+    Output:
+
+    welcome
+    to
+    SSSIT</pre>
+
+<h3 style="color: darkgreen;">II. Numeric literals:</h3>
+
+<b>Int(signed integers)</b>
+<p>Numbers( can be both positive and negative) with no fractional part.eg: 100</p>
+<b>Long(long integers)</b>
+<p>Integers of unlimited size followed by lowercase or uppercase L eg: 87032845L</p>
+<b>float(floating point)</b>
+<p>Real numbers with both integer and fractional part eg: -26.2</p>
+<b>Complex(complex)</b>
+<p>In the form of a+bj where a forms the real part and b forms the imaginary part of the complex number. eg: 3.14j</p>
+<pre>
+    Example - Numeric Literals
+
+x = 0b10100 #Binary Literals
+y = 100 #Decimal Literal
+z = 0o215 #Octal Literal
+u = 0x12d #Hexadecimal Literal
+
+#Float Literal
+float_1 = 100.5
+float_2 = 1.5e2
+
+#Complex Literal
+a = 5+3.14j
+
+print(x, y, z, u)
+print(float_1, float_2)
+print(a, a.imag, a.real)
+Output:
+
+20 100 141 301
+100.5 150.0
+(5+3.14j) 3.14 5.0
+</pre>
+
+
+<h3 style="color: darkgreen;">III. Boolean literals:</h3>
+<p>A Boolean literal can have any of the two values: True or False.</p>
+<pre>Example - Boolean Literals
+
+    x = (1 == True)
+    y = (2 == False)
+    z = (3 == True)
+    a = True + 10
+    b = False + 10
+
+    print("x is", x)
+    print("y is", y)
+    print("z is", z)
+    print("a:", a)
+    print("b:", b)
+    Output:
+
+    x is True
+    y is False
+    z is False
+    a: 11
+    b: 10</pre>
+<h3 style="color: darkgreen;">IV. Special literals.</h3>
+<p>Python contains one special literal i.e., None.</p>
+<p>None is used to specify to that field that is not created. It is also used for the end of lists in Python.</p>
+<pre>Example - Special Literals
+
+    val1=10
+    val2=None
+    print(val1)
+    print(val2)
+    Output:
+
+    10
+    None</pre>
+<h3 style="color: darkgreen;">V. Literal Collections.</h3>
+<p>Python provides the four types of literal collection such as List literals, Tuple literals, Dict literals, and Set literals.</p>
+<b>List:</b>
+<ul>
+    <li>List contains items of different data types. Lists are mutable i.e., modifiable</li>
+    <li>The values stored in List are separated by comma(,) and enclosed within square brackets([]). We can store different types of data in a List</li>
+</ul>
+<pre>Example - List literals
+
+    list=['John',678,20.4,'Peter']
+    list1=[456,'Andrew']
+    print(list)
+    print(list + list1)
+    Output:
+
+    ['John', 678, 20.4, 'Peter']
+    ['John', 678, 20.4, 'Peter', 456, 'Andrew']</pre>
+
+
+
+
+<b>Dictionary:</b>
+<ul>
+    <li>Python dictionary stores the data in the key-value pair.</li>
+    <li>It is enclosed by curly-braces {} and each pair is separated by the commas(,).</li>
+</ul>
+<pre>Example
+
+    dict = {'name': 'Pater', 'Age':18,'Roll_nu':101}
+    print(dict)
+    Output:
+
+    {'name': 'Pater', 'Age': 18, 'Roll_nu': 101}</pre>
+
+
+
+<b>Tuple:</b>
+<ul>
+    <li>Python tuple is a collection of different data-type. It is immutable which means it cannot be modified after creation.</li>
+    <li>It is enclosed by the parentheses () and each element is separated by the comma(,).</li>
+</ul>
+<pre>Example
+
+    tup = (10,20,"Dev",[2,3,4])
+    print(tup)
+    Output:
+
+    (10, 20, 'Dev', [2, 3, 4])</pre>
+<b>Set:</b>
+<ul>
+    <li>Python set is the collection of the unordered dataset.</li>
+    <li>It is enclosed by the {} and each element is separated by the comma(,).</li>
+</ul>
+<pre>Example: - Set Literals
+
+    set = {'apple','grapes','guava','papaya'}
+    print(set)
+    Output:
+
+    {'guava', 'apple', 'papaya', 'grapes'}</pre>
+
+
+
+
+<hr>
+
+</body>
+
+</html>

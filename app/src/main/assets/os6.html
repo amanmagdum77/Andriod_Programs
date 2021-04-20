@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Memory Management:</h1>
+<hr color="red">
+<p>
+    These techniques allow the memory to be shared among multiple processes.
+<ol>
+    <li><strong>Overlays : </strong>The memory should contain only those instructions and data that are required at a given time. </li>
+    <br>
+    <li><strong>Swapping </strong>In multiprogramming, the instructions that have used the time slice are swapped out from the memory. </li>
+</ol>
+<h3 style="color: darkgreen;">Memory Management Techniques: </h3>
+There are three ways to handle deadlock
+<ul>
+    <li><strong> Single Partition Allocation Schemes : </strong>The memory is divided into two parts. One part is kept to be used by the OS and the other is kept to be used by the users.</li>
+    <br>
+    <li><strong>Multiple Partition Schemes : </strong></li>
+    <br>
+    <ol>
+        <li><strong>Fixed Partition : </strong>The memory is divided into fixed size partitions.</li>
+        <br>
+        <li><strong>Variable Partition : </strong>The memory is divided into variable sized partitions.</li>
+    </ol>
+    <br>
+    Variable partition allocation schemes:
+    <br>
+    <br>
+    <ol>
+        <li><strong>First Fit : </strong>The arriving process is allotted the first hole of memory in which it fits completely. </li>
+        <br>
+        <li><strong>Best Fit : </strong>The arriving process is allotted the hole of memory in which it fits the best by leaving the minimum memory empty. </li>
+        <br>
+        <li><strong>Worst Fit : </strong>The arriving process is allotted the hole of memory in which it leaves the maximum gap. </li>
+    </ol>
+</ul>
+<h3 style="color: darkgreen;">Note : </h3>
+<ul>
+    <li>Best fit does not necessarily give the best results for memory allocation</li>
+    <br>
+    <li>The cause of external fragmentation is the condition in Fixed partitioning and Variable partitioning saying that entire process should be allocated in a contiguous memory location.Therefore Paging is used.</li>
+</ul>
+<hr></body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link type="text/css" href="style.css" rel="stylesheet" />
+</head>
+<body>
+<h1 style="text-align: center">Python continue statement</h1>
+<hr color="red" />
+<p>The continue statement is used to skip the rest of the code inside a loop for the current iteration only. Loop does not terminate but continues on with the next iteration.</p>
+
+<pre>Syntax of Continue
+    continue</pre>
+<img src="basic12_1.PNG"  width="100%" height="100%" alt="Flowchart of continue">
+<p>The working of continue statement in for and while loop is shown below.</p>
+<img src="basic12_2.PNG"  width="100%" height="100%" alt="Working of break statement">
+<pre>Example: Python continue
+    # Program to show the use of continue
+    #statement inside loops
+
+    for val in "string":
+        if val == "i":
+            continue
+        print(val)
+
+    print("The end")</pre>
+<pre>Output
+
+    s
+    t
+    r
+    n
+    g
+    The end</pre>
+<p>This program is same as the above example except the break statement has been replaced with continue</p>
+<p>We continue with the loop, if the string is i, not executing the rest of the block. Hence, we see in our output that all the letters except i gets printed.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+</body>
+</html>

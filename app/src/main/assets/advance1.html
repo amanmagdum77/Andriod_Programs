@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="style.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+<h1 style="text-align: center;">Python Strings</h1>
+<hr color="red">
+<h3 style="color: darkgreen;">Strings</h3>
+<pre>Strings in python are surrounded by either single quotation marks, or double quotation marks.
+
+'hello' is the same as "hello".
+
+You can display a string literal with the print() function:</pre>
+<pre>print("Hello")
+print('Hello')
+        </pre>
+
+
+<h3 style="color: darkgreen;">Assign String to a Variable</h3>
+<p>You can assign a multiline string to a variable by using three quotes:</p>
+<pre>a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
+
+Or three single quotes:
+
+a = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.'''
+print(a)</pre>
+
+<h3 style="color: darkgreen;">Strings are Arrays</h3>
+<pre>Like many other popular programming languages, strings in Python are arrays of bytes representing unicode characters.
+
+However, Python does not have a character data type, a single character is simply a string with a length of 1.
+
+Square brackets can be used to access elements of the string.</pre>
+<pre>
+Get the character at position 1 (remember that the first character has the position 0):
+
+a = "Hello, World!"
+print(a[1])</pre>
+
+<h3 style="color: darkgreen;">Looping Through a String</h3>
+<p>Since strings are arrays, we can loop through the characters in a string, with a for loop.</p>
+<pre>
+Loop through the letters in the word "banana":
+
+for x in "banana":
+print(x)</pre>
+
+<h3 style="color: darkgreen;">String Length</h3>
+<p>To get the length of a string, use the len() function.</p>
+<pre>The len() function returns the length of a string:
+
+a = "Hello, World!"
+print(len(a))</pre>
+
+<h3 style="color: darkgreen;">Check String</h3>
+<p>To check if a certain phrase or character is present in a string, we can use the keyword in..</p>
+<pre>Check if "free" is present in the following text:
+
+txt = "The best things in life are free!"
+print("free" in txt)</pre>
+
+
+<p>Use it in an if statement:.</p>
+<pre>Print only if "free" is present:
+
+txt = "The best things in life are free!"
+if "free" in txt:
+    print("Yes, 'free' is present.")</pre>
+
+
+<h3 style="color: darkgreen;">Check if NOT</h3>
+<p>To check if a certain phrase or character is NOT present in a string, we can use the keyword not in</p>
+<pre>Check if "expensive" is NOT present in the following text:
+
+txt = "The best things in life are free!"
+print("expensive" not in txt)</pre>
+
+
+<p>print only if "expensive" is NOT present:</p>
+<pre>txt = "The best things in life are free!"
+if "expensive" not in txt:
+    print("Yes, 'expensive' is NOT present.")</pre>
+<hr>
+</body>
+</html>

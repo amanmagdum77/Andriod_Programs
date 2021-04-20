@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">File Allocation Methods : </h1>
+<hr color="red">
+<p>
+<h3 style="color: darkgreen;">File System : </h3>
+A file is a collection of related information that is recorded on secondary storage. Or file is a collection of logically related entities.
+<h3 style="color: darkgreen;">File Directories : </h3>
+Collection of files is a file directory. The directory contains information about the files, including attributes, location and ownership. Much of this information, especially that is concerned with storage, is managed by the operating system.
+
+<ol>
+    <li><Strong>SINGLE-LEVEL DIRECTORY: </Strong> In this a single directory is maintained for all the users </li>
+    <br>
+    <li><strong>TWO-LEVEL DIRECTORY: </strong>Due to two levels there is a path name for every file to locate that file.</li>
+    <br>
+    <li><strong>TREE-STRUCTURED DIRECTORY : </strong>Directory is maintained in the form of a tree. Searching is efficient and also there is grouping capability.</li>
+</ol>
+<h3 style="color: darkgreen;">File Allocation Methods : </h3>
+<ol>
+    <li><strong>Continuous Allocation: </strong> A single continuous set of blocks is allocated to a file at the time of file creation. </li>
+    <br>
+    <li><strong>Linked Allocation(Non-contiguous allocation) : </strong>Allocation is on an individual block basis. Each block contains a pointer to the next block in the chain. </li>
+    <br>
+    <li><strong>Indexed Allocation : </strong>It addresses many of the problems of contiguous and chained allocation. In this case, the file allocation table contains a separate one-level index for each file </li>
+</ol>
+<h3 style="color: darkgreen;">Disk Scheduling : </h3>
+Disk scheduling is done by operating systems to schedule I/O requests arriving for disk. Disk scheduling is also known as I/O scheduling.
+<ol>
+    <li><strong>Seek Time : </strong>Seek time is the time taken to locate the disk arm to a specified track where the data is to be read or write. </li>
+    <br>
+    <li><strong>Rotational Latency: </strong> Rotational Latency is the time taken by the desired sector of disk to rotate into a position so that it can access the read/write heads. </li>
+    <br>
+    <li><strong>Transfer Time : </strong>Transfer time is the time to transfer the data. It depends on the rotating speed of the disk and number of bytes to be transferred. </li>
+    <br>
+    <li><strong>Disk Access Time : </strong>Seek Time + Rotational Latency + Transfer Time </li>
+    <br>
+    <li><Strong>Disk Response Time :</Strong> Response Time is the average of time spent by a request waiting to perform its I/O operation. Average Response time is the response time of the all requests. </li>
+</ol>
+<h3 style="color: darkgreen;">Disk Scheduling Algorithms : </h3>
+<ol>
+    <li><strong>FCFS : </strong>FCFS is the simplest of all the Disk Scheduling Algorithms. In FCFS, the requests are addressed in the order they arrive in the disk queue. </li>
+    <br>
+    <li><strong>SSTF : </strong> In SSTF (Shortest Seek Time First), requests having shortest seek time are executed first. So, the seek time of every request is calculated in advance in a queue and then they are scheduled according to their calculated seek time. As a result, the request near the disk arm will get executed first. </li>
+    <br>
+    <li><strong>SCAN : </strong>In SCAN algorithm the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of the disk, it reverses its direction and again services the request arriving in its path. So, this algorithm works like an elevator and hence also known as elevator algorithm. </li>
+    <br>
+    <li><strong>CSCAN : </strong>In SCAN algorithm, the disk arm again scans the path that has been scanned, after reversing its direction. So, it may be possible that too many requests are waiting at the other end or there may be zero or few requests pending at the scanned area. </li>
+    <br>
+    <li><strong>LOOK : </strong> It is similar to the SCAN disk scheduling algorithm except for the difference that the disk arm in spite of going to the end of the disk goes only to the last request to be serviced in front of the head and then reverses its direction from there only. Thus it prevents the extra delay which occurred due to unnecessary traversal to the end of the disk. </li>
+    <br>
+    <li><strong>CLOOK : </strong>As LOOK is similar to SCAN algorithm, in a similar way, CLOOK is similar to CSCAN disk scheduling algorithm. In CLOOK, the disk arm in spite of going to the end goes only to the last request to be serviced in front of the head and then from there goes to the other end’s last request. Thus, it also prevents the extra delay which occurred due to unnecessary traversal to the end of the disk. </li>
+</ol>
+</p>
+<hr></body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">DeadLock</h1>
+<hr color="red">
+<p>
+<h3 style="color: darkgreen;">Deadlock:</h3>
+A situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. Deadlock can arise if following four conditions hold simultaneously (Necessary Conditions):
+<ol>
+    <li><strong>Mutual Exclusion : </strong>One or more than one resource are non-sharable (Only one process can use at a time).  </li>
+    <br>
+    <li><strong>Hold and Wait</strong>A process is holding at least one resource and waiting for resources. </li>
+    <br>
+    <li><strong>No Preemption : </strong>A resource cannot be taken from a process unless the process releases the resource. </li>
+    <br>
+    <li><strong>Circular Wait : </strong>A set of processes are waiting for each other in circular form.</li>
+</ol>
+<h3 style="color: darkgreen;">Methods for handling deadlock:</h3>
+There are three ways to handle deadlock
+<ol>
+    <li><strong>Deadlock prevention or avoidance: </strong>The idea is to not let the system into deadlock state.</li>
+    <br>
+    <li><strong>Deadlock detection and recovery: </strong>Let deadlock occur, then do preemption to handle it once occurred. </li>
+    <br>
+    <li><strong>Ignore the problem all together</strong> If deadlock is very rare, then let it happen and reboot the system. This is the approach that both Windows and UNIX take. </li>
+</ol>
+<h3 style="color: darkgreen;">Bankers Algorithm : </h3>
+The banker’s algorithm is a resource allocation and deadlock avoidance algorithm that tests for safety by simulating the allocation for predetermined maximum possible amounts of all resources, then makes an “s-state” check to test for possible activities, before deciding whether allocation should be allowed to continue.
+</p>
+<hr></body>
+</html>

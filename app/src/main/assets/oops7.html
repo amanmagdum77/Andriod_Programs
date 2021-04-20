@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Polymorphism in Python</h1>
+<hr color="red">
+<h3 style="color: hsl(120, 100%, 20%);">What is Polymorphism?</h3>
+<p>The literal meaning of polymorphism is the condition of occurrence in different forms.</p>
+<p>Polymorphism is a very important concept in programming. It refers to the use of a single type entity (method, operator or object) to represent different types in different scenarios.</p>
+<p>Let's take an example:</p>
+<hr>
+<b>Example 1: Polymorphism in addition operator</b>
+
+<p>We know that the + operator is used extensively in Python programs. But, it does not have a single usage.</p>
+<p>For integer data types, + operator is used to perform arithmetic addition operation.</p>
+<pre>num1 = 1
+    num2 = 2
+    print(num1+num2)</pre>
+<p>Hence, the above program outputs 3.</p>
+<hr>
+<p>Similarly, for string data types, + operator is used to perform concatenation.</p>
+<pre>str1 = "Python"
+    str2 = "Programming"
+    print(str1+" "+str2)</pre>
+<p>As a result, the above program outputs Python Programming.</p>
+<p>Here, we can see that a single operator + has been used to carry out different operations for distinct data types. This is one of the most simple occurrences of polymorphism in Python.</p>
+<hr>
+<h3 style="color: hsl(120, 100%, 20%);">Function Polymorphism in Python</h3>
+<p>There are some functions in Python which are compatible to run with multiple data types.</p>
+<p>One such function is the len() function. It can run with many data types in Python. Let's look at some example use cases of the function.</p>
+<b>Example 2: Polymorphic len() function</b>
+<pre>print(len("Programiz"))
+    print(len(["Python", "Java", "C"]))
+    print(len({"Name": "John", "Address": "Nepal"}))</pre>
+<pre>Output
+
+    9
+    3
+    2</pre>
+<p>Here, we can see that many data types such as string, list, tuple, set, and dictionary can work with the len() function. However, we can see that it returns specific information about specific data types.</p>
+<img src="oops7_1.PNG"  width="100%" height="100%" alt="Polymorphism in len() function in python">
+<h3 style="color: hsl(120, 100%, 20%);">Class Polymorphism in Python</h3>
+<p>Polymorphism is a very important concept in Object-Oriented Programming</p>
+<p>To learn more about OOP in Python, visit: Python Object-Oriented Programming</p>
+<p>We can use the concept of polymorphism while creating class methods as Python allows different classes to have methods with the same name.</p>
+<p>We can then later generalize calling these methods by disregarding the object we are working with. Let's look at an example:</p>
+<b>Example 3: Polymorphism in Class Methods</b>
+<pre>class Cat:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f"I am a cat. My name is {self.name}. I am {self.age} years old.")
+
+    def make_sound(self):
+        print("Meow")
+
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f"I am a dog. My name is {self.name}. I am {self.age} years old.")
+
+    def make_sound(self):
+        print("Bark")
+
+
+cat1 = Cat("Kitty", 2.5)
+dog1 = Dog("Fluffy", 4)
+
+for animal in (cat1, dog1):
+    animal.make_sound()
+    animal.info()
+    animal.make_sound()</pre>
+<pre>Output
+
+    Meow
+    I am a cat. My name is Kitty. I am 2.5 years old.
+    Meow
+    Bark
+    I am a dog. My name is Fluffy. I am 4 years old.
+    Bark</pre>
+<p>Here, we have created two classes Cat and Dog. They share a similar structure and have the same method names info() and make_sound().</p>
+<p>However, notice that we have not created a common superclass or linked the classes together in any way. Even then, we can pack these two different objects into a tuple and iterate through it using a common animal variable. It is possible due to polymorphism.
+
+</p>
+<hr>
+<h3 style="color: hsl(120, 100%, 20%);">Polymorphism and Inheritance</h3>
+<p>Like in other programming languages, the child classes in Python also inherit methods and attributes from the parent class. We can redefine certain methods and attributes specifically to fit the child class, which is known as Method Overriding</p>
+<p>Polymorphism allows us to access these overridden methods and attributes that have the same name as the parent class.</p>
+<p>Let's look at an example:</p>
+<b>Example 4: Method Overriding</b>
+<pre>from math import pi
+
+
+    class Shape:
+        def __init__(self, name):
+            self.name = name
+
+        def area(self):
+            pass
+
+        def fact(self):
+            return "I am a two-dimensional shape."
+
+        def __str__(self):
+            return self.name
+
+
+    class Square(Shape):
+        def __init__(self, length):
+            super().__init__("Square")
+            self.length = length
+
+        def area(self):
+            return self.length**2
+
+        def fact(self):
+            return "Squares have each angle equal to 90 degrees."
+
+
+    class Circle(Shape):
+        def __init__(self, radius):
+            super().__init__("Circle")
+            self.radius = radius
+
+        def area(self):
+            return pi*self.radius**2
+
+
+    a = Square(4)
+    b = Circle(7)
+    print(b)
+    print(b.fact())
+    print(a.fact())
+    print(b.area())</pre>
+<pre>Circle
+    I am a two-dimensional shape.
+    Squares have each angle equal to 90 degrees.
+    153.93804002589985</pre>
+
+
+<p>Here, we can see that the methods such as __str__(), which have not been overridden in the child classes, are used from the parent class.</p>
+<p>Due to polymorphism, the Python interpreter automatically recognizes that the fact() method for object a(Square class) is overridden. So, it uses the one defined in the child class.</p>
+<p>On the other hand, since the fact() method for object b isn't overridden, it is used from the Parent Shape class.</p>
+<img src="oops7_2.PNG"  width="100%" height="100%" alt="Polymorphism in parent and child classes in python">
+<p>Note: Method Overloading, a way to create multiple methods with the same name but different arguments, is not possible in Python.</p>
+
+
+<!-- <img src="oops5_1.PNG"  width="100%" height="100%" alt="Multilevel Inheritance">
+ -->
+
+
+
+
+<!-- <h3 style="color: hsl(120, 100%, 20%);">The import Statement</h3> -->
+
+
+
+
+
+
+<!-- <br>
+<br>
+<a href="https://www.tutorialspoint.com/python/python_modules.htm#:~:text=A%20module%20is%20a%20Python,can%20also%20include%20runnable%20code."><input type=button value='Know More' style="color: white; background-color: green;height: 40px ; width: 100px;"></a>
+<br>
+<br>
+<br> -->
+<hr>
+</body>
+</html>

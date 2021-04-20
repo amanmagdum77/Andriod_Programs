@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Critical Section</h1>
+<hr color="red">
+<p>
+<h3 style="color: darkgreen;">The Critical Section Problem:</h3>
+<ol>
+    <li><strong>Critical Section : </strong>The portion of the code in the program where shared variables are accessed and/or updated. </li>
+    <br>
+    <li><strong>Remainder Section : </strong>The remaining portion of the program excluding the Critical Section. </li>
+    <br>
+    <li><strong>Race around Condition : </strong> The final output of the code depends on the order in which the variables are accessed. This is termed as the race around condition. </li>
+</ol>
+A solution for the critical section problem must satisfy the following three conditions:
+<ol>
+    <li><strong>Mutual Exclusion : </strong> If a process Pi is executing in its critical section, then no other process is allowed to enter into the critical section.  </li>
+    <br>
+    <li><strong>Progress : </strong>If no process is executing in the critical section, then the decision of a process to enter a critical section cannot be made by any other process that is executing in its remainder section. The selection of the process cannot be postponed indefinitely. </li>
+    <br>
+    <li><strong>Bounded Waiting : </strong>There exists a bound on the number of times other processes can enter into the critical section after a process has made request to access the critical section and before the requested is granted.  </li>
+</ol>
+<h3 style="color: darkgreen;">Synchronization Tools:</h3>
+A <strong>Semaphore</strong> is an integer variable that is accessed only through two atomic operations, wait () and signal (). An atomic operation is executed in a single CPU time slice without any pre-emption. Semaphores are of two types:
+<ol>
+    <li><strong>Counting Semaphore : </strong>A counting semaphore is an integer variable whose value can range over an unrestricted domain.</li>
+    <br>
+    <li><strong>Mutex : </strong>These can have only two values, 0 or 1. The operations wait () and signal () operate on these in a similar fashion. Mutex is different than a semaphore as it is a locking mechanism while a semaphore is a signalling mechanism. A binary semaphore can be used as a Mutex but a Mutex can never be used as a semaphore. </li>
+</ol>
+</p>
+<hr></body>
+</html>

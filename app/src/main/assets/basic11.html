@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link type="text/css" href="style.css" rel="stylesheet" />
+</head>
+<body>
+<h1 style="text-align: center">Python break</h1>
+<hr color="red" />
+
+
+<h3 style="color: darkgreen">What is the use of break and continue in Python?</h3>
+<p>In Python, break and continue statements can alter the flow of a normal loop.</p>
+<p>Loops iterate over a block of code until the test expression is false, but sometimes we wish to terminate the current iteration or even the whole loop without checking test expression.</p>
+
+The break and continue statements are used in these cases.
+<h3 style="color: darkgreen">Python break statement</h3>
+<p>The break statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.</p>
+<p>If the break statement is inside a nested loop (loop inside another loop), the break statement will terminate the innermost loop.</p>
+<pre>Syntax of break
+      break</pre>
+<h3 style="color: darkgreen">Flowchart of break</h3>
+<img src="basic11_1.PNG"  width="100%" height="100%" alt="Flowchart break statement">
+<p>The working of break statement in for loop and while loop is shown below.</p>
+<img src="basic11_2.PNG"  width="100%" height="100%" alt="Working of break statement">
+<pre>Example: Python break
+    # Use of break statement inside the loop
+
+    for val in "string":
+        if val == "i":
+            break
+        print(val)
+
+    print("The end")</pre>
+<pre>Output
+
+    s
+    t
+    r
+    The end</pre>
+<p>In this program, we iterate through the "string" sequence. We check if the letter is i, upon which we break from the loop. Hence, we see in our output that all the letters up till i gets printed. After that, the loop terminates.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+</body>
+</html>

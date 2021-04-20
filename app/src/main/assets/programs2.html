@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link type="text/css" href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1 style="text-align: center;">Number Systems</h1>
+<hr color="red">
+
+
+
+
+<h3 style="color: darkgreen;">Binary to Decimal conversion</h3>
+
+
+
+<pre>a = list(map(int,input("Enter Binary number")))
+    print(a)
+
+    d=0
+    for i in range(len(a)):
+        d = d + a[i]*(2**i)
+
+    print(d)
+    </pre>
+
+<h3 style="color: darkgreen;">Decimal to Hexadecimal conversion</h3>
+
+
+
+<pre>n=int(input("Enter number"))
+    a=[]
+    i=0
+    while n!=0:
+        p=n%16
+        if p==10:
+            a.append('A')
+        elif p==11:
+            a.append('B')
+        elif p==12:
+            a.append('C')
+        elif p==13:
+            a.append('D')
+        elif p==14:
+            a.append('E')
+        elif p==15:
+            a.append('F')
+        else:
+            a.append(p)
+        n=int(n/16)
+
+
+    a.reverse()
+
+    for i in range(len(a)):
+        print(a[i],end='')
+    </pre>
+
+<h3 style="color: darkgreen;">Binary to Decimal conversion</h3>
+
+
+
+<pre>a = list(map(int,input("Enter Binary number")))
+    print(a)
+
+    d=0
+    for i in range(len(a)):
+        d = d + a[i]*(2**i)
+
+    print(d)
+    </pre>
+
+<h3 style="color: darkgreen;">Decimal to Binary conversion</h3>
+
+
+
+<pre>n=int(input("Enter number"))
+    a=[]
+    i=0
+    while n!=0:
+        p=n%2
+        a.append(p)
+        n=int(n/2)
+
+    for i in range(len(a)-1,-1,-1):
+        print(a[i],end='')
+    </pre>
+
+
+<h3 style="color: darkgreen;">Decimal to Octaldecimal conversion</h3>
+<pre>n=int(input("Enter number"))
+    a=[]
+    i=0
+    while n!=0:
+        p=n%8
+        a.append(p)
+        n=int(n/8)
+
+    print(a)
+    a.reverse()
+
+    for i in range(len(a)):
+        print(a[i],end='')
+
+    </pre>
+<h3 style="color: darkgreen;">Hexa to Decimal</h3>
+<pre>a=list(map(str,input()))
+    a.reverse()
+    print(a)
+    d=0
+    for i in range(len(a)):
+        if a[i]=='A':
+            d = d + 10*(8**i)
+        elif a[i]=='B':
+            d = d + 11*(8**i)
+        elif a[i]=='C':
+            d = d + 12*(8**i)
+        elif a[i]=='D':
+            d = d + 13*(8**i)
+        elif a[i]=='E':
+            d = d + 14*(8**i)
+        elif a[i]=='F':
+            d = d + 15*(8**i)
+        else:
+            d = d + int(a[i])*(8**i)
+
+    print(d)
+
+    </pre>
+
+<h3 style="color: darkgreen;">Octal to Decimal</h3>
+<pre>a=list(map(int,input()))
+    a.reverse()
+    print(a)
+    d=0
+    for i in range(len(a)):
+        d = d + a[i]*(8**i)
+
+    print(d)
+
+
+    </pre>
+<hr></body>
+</html>

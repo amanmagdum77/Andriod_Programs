@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Java</string>
+    <string name="welcome_to_11th_hour_study">Welcome to 11th Hour Study</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="_11th_hour_study">11th Hour Study</string>
+    <string name="basic_tutorial">Basic Tutorial</string>
+    <string name="data_structures">Data Structures</string>
+    <string name="oops">OOPS</string>
+    <string name="videos">Videos</string>
+    <string name="introduction">Introduction</string>
+</resources>
